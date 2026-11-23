@@ -1,0 +1,72 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 36px 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+  background: #f3f6fb;
+}
+.container {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(31, 41, 55, .08);
+}
+header { margin-bottom: 24px; }
+h1 { margin: 0 0 8px; color: #173b68; }
+header p, .notice { color: #64748b; }
+form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: end;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+.field { display: flex; flex-direction: column; gap: 7px; }
+label { font-size: 14px; font-weight: 700; }
+input {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 15px;
+}
+input:focus { outline: 2px solid #93c5fd; border-color: #2563eb; }
+button {
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 7px;
+  color: white;
+  background: #2563eb;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:hover { background: #1d4ed8; }
+form button { grid-column: 1 / -1; }
+.records { margin-top: 30px; }
+.records-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+h2 { font-size: 20px; }
+.secondary { background: #64748b; }
+.secondary:hover { background: #475569; }
+.empty { color: #64748b; padding: 12px 0; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+th { color: #475569; background: #f8fafc; font-size: 13px; }
+.delete-button { padding: 7px 10px; background: #dc2626; }
+.delete-button:hover { background: #b91c1c; }
+.notice { margin: 22px 0 0; font-size: 12px; }
+@media (max-width: 620px) {
+  .container { padding: 20px; }
+  form { grid-template-columns: 1fr; }
+  form button { grid-column: auto; }
+  .records-heading { align-items: flex-start; flex-direction: column; }
+}
